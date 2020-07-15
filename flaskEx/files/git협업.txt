@@ -1,0 +1,22 @@
+//본인 계정과 fork한 계정 연결 하는 법
+git clone [본인 repository주소]
+git remote add [remote 이름] [fork한 repository주소]
+git remote -v //확인
+ 
+
+다른사람이 main 수정함 
+-> 충돌 방지하기 위해 main merge 필요함 (같은 파일 수정했을때만 충돌)
+
+//내가 수정한거 올릴 때(일단 내 repository에)
+git add .
+git commit -m"message"
+git push
+
+//<main을 merge 하는 법> fork한 repository에 새로운 내용이 추가 되었을 때 내 local repository에 적용하기
+git fetch [remote 이름] //수정 내용 끌어오기
+git merge [remote이름]/master
+※pull = fetch+merge 근데 merge할것이 많으면 안먹힘 (그래서 fetch+merge따로 권장)
+
+//pull request
+깃허브가서 pull request -> 확신 있을 때!
+나의 repository에 가서 pull requests -> new pull request

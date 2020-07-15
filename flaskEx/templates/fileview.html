@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+file upload
+{% endblock %}
+
+{% block content %}
+<br>
+<h1 class="blockquote text-center">다운로드 파일 목록</h1>
+<div class="container">
+<table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">파일명</th>
+        <th scope="col">링크</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for file in files %}
+        <tr>
+            <td scope="row">{{loop.index}}</td>
+            <td>{{file}}</td>
+            <td><a href="/filelist/{{file}}">파일 다운로드</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

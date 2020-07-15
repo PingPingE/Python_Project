@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+file upload
+{% endblock %}
+
+{% block content %}
+<br>
+    <div class="container-fluid">
+        <form action='/fileupload' method="post" enctype="multipart/form-data">
+            <input type="file" name = "file"/>
+            <button type="submit">upload</button>
+        </form>
+    </div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

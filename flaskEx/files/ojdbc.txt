@@ -1,0 +1,5 @@
+C:\sqldeveloper\jdbc\lib
+에 있는 jar파일 이동
+
+
+C:\Users\admin\.m2\repository\com\oracle\ojdbc\8

@@ -1,0 +1,21 @@
+insert into enterprise(ent_id,ent_name,paper_end) values(5, 'kakao', to_date(SYSDATE+1,'yy.mm.dd hh24:mi')); 
+select sysdate from dual;
+select to_char(paper_end,'yyyy-mm-dd hh24:mi:ss') from enterprise;
+select TO_CHAR(SYSDATE, 'YY.MM.DD HH24:MI:SS') from dual;
+select * from enterprise;
+insert into lecture(lec_id, lec_name, lec_start, lec_end) values(1,'spring', sysdate, sysdate+10);
+insert into assignment(lec_id, asign_name, asign_end) values(1, 'spring project1' ,sysdate+3);
+insert into assignment(lec_id, asign_name, asign_end) values(1, 'spring project2' ,sysdate+3);
+select * from assignment;
+select * from lecture, assignment, enterprise where ROWNUM=1;
+select count(*) from assignment;
+commit;
+select * from assignment;
+
+insert into enterprise(ent_id,ent_name,paper_end) values(2, 'kakao', to_date(SYSDATE+1,'yy.mm.dd hh24:mi')); 
+commit;
+select * from enterprise;
+insert into lecture(lec_id, lec_name, lec_start, lec_end) values(2,'python', sysdate, sysdate+30);
+insert into assignment(lec_id, asign_name, asign_end) values(2, 'python project1' ,sysdate+10);
+
+insert into lecture(lec_id, lec_name, lec_start, lec_end) values(3,'R', sysdate, sysdate+10);
